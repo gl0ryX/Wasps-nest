@@ -42,7 +42,7 @@ case $choice in
      1) nmap -p25 -Pn –script smtp-brute $ip ;;
      2) nmap -sX -v $ip ;;
      3) nmap -sN -V $ip ;;
-     4) ./robots.sh ;;
+     4) ./main.sh ;;
      5) ./main.sh ;;
      *) echo; echo "Invalid choice."; echo
 esac
