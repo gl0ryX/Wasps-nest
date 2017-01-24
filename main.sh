@@ -41,7 +41,7 @@ case $choice in
      1) ./infogathering.sh ;;
      2) ./nmapninja.sh ;;
      3) ./scanfu.sh ;;
-     4) ./robots.sh ;;
+     4) ./brutef.sh ;;
      5) exit ;;
      *) echo; echo "Invalid choice."; echo
 esac
