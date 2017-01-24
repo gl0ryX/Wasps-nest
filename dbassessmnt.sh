@@ -43,7 +43,7 @@ echo $choice
 case $choice in
      1) sqlmap -u "$ip/$page" --dbs   ;;
      2) ./dbassessmnt.sh ;;
-     3) theharvester -d $ip -b all -f $ip.$(date +%Y-%m-%d_%H:%M)  ;;
+     3) ./main.sh  ;;
      4) ./main.sh ;;
      5) ./main.sh ;;
      *) echo; echo "Invalid choice."; echo
