@@ -42,7 +42,7 @@ read choice
 echo $choice
 case $choice in
      1) sqlmap -u "$ip/$page" --dbs   ;;
-     2) ./dbassessmnt.sh ;;
+     2) sqlmap -u "$ip/$page" --dump ;;
      3) ./main.sh  ;;
      4) ./main.sh ;;
      5) ./main.sh ;;
