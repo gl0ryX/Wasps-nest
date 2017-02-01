@@ -23,6 +23,7 @@ echo -e "\e[1;32m[1]. DMitry.\e[0m"
 echo -e "\e[1;32m[2]. Bing.com Scan online.\e[0m"
 echo -e "\e[1;32m[3]. The Harvester.\e[0m"
 echo -e "\e[1;32m[4]. find subdomains.\e[0m"
+echo -e "\e[1;32m[5]. Ping Sweep.\e[0m"
 echo -e "\e[1;32m[5]. Back.\e[0m"
 echo
 echo -e "\e[1;31m1. $ip.\e[0m"
@@ -36,6 +37,7 @@ case $choice in
      2) firefox http://www.bing.com/search?q=ip%3A$ip&go=Submit+Query&qs=ds&form=QBLH & ;;
      3) theharvester -d $ip -b all -f report/$ip.$(date +%Y-%m-%d_%H:%M)  ;;
      4) ./subdomain.sh ;;
-     5) ./main.sh ;;
+     5) ./pings.sh ;;
+     6) ./main.sh ;;
      *) echo; echo "Invalid choice."; echo
 esac
