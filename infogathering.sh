@@ -24,7 +24,7 @@ echo -e "\e[1;32m[2]. Bing.com Scan online.\e[0m"
 echo -e "\e[1;32m[3]. The Harvester.\e[0m"
 echo -e "\e[1;32m[4]. find subdomains.\e[0m"
 echo -e "\e[1;32m[5]. Ping Sweep.\e[0m"
-echo -e "\e[1;32m[5]. Back.\e[0m"
+echo -e "\e[1;32m[6]. Back.\e[0m"
 echo
 echo -e "\e[1;31m1. $ip.\e[0m"
 echo -e "\e[1;32m1. Choice.\e[0m"
