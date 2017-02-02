@@ -26,7 +26,7 @@ echo -e "\e[1;31m:::::::Wasps Nest Tool v.0 2017:::::::.\e[0m"
 echo "                                              c0ded by sup3r."
 echo -e "\e[1;31mPlease enter Your Ip:\e[0m"
 read lip
-echo -e "\e[1;31mPlease enter Port reverse:\e[0m"
+echo -e "\e[1;31mPlease enter reverse Port:\e[0m"
 read lport
 echo -e "\e[1;31mPlease enter reverse backdoor name:\e[0m"
 read bkname
