@@ -29,8 +29,9 @@ read ip
 echo "[*]-1 Brute forcing SMTP passwords"
 echo "[*]-2 Xmas Scan" 
 echo "[*]-3 Nmap Null Scan" 
-echo "[*]-4 Nmap" 
-echo "[*]-5 Back" 
+echo "[*]-4 Nmap scan all port" 
+echo "[*]-5 Nmap scan port open" 
+echo "[*]-6 Back" 
 echo
 echo " - - - - "$ip" - - - -"
 echo -e "\e[1;36m1. Choice.\e[0m"
@@ -42,7 +43,8 @@ case $choice in
      1) nmap -p25 -Pn –script smtp-brute $ip ;;
      2) nmap -sX -v $ip ;;
      3) nmap -sN -V $ip ;;
-     4) ./main.sh ;;
-     5) ./main.sh ;;
+     4) nmap -A -p- $ip ;;
+     5) nmap -A -p- -Pn --open -T4 $ip ;;
+     5) wasp ;;
      *) echo; echo "Invalid choice."; echo
 esac
