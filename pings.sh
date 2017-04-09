@@ -21,4 +21,4 @@ echo -e "\e[1;32m:::::::Ping Sweep:::::::.\e[0m"
 echo  "Enter Ip: Example 10.15.2"
 read ip
 for i in `seq 1 255`; do ping -c1 $ip.$i; done | grep "bytes from";
-./headerp.sh
+/usr/share/wasp/headerp.sh
