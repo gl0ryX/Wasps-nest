@@ -45,6 +45,6 @@ case $choice in
      3) nmap -sN -V $ip ;;
      4) nmap -A -p- $ip ;;
      5) nmap -A -p- -Pn --open -T4 $ip ;;
-     5) wasp ;;
+     6) wasp ;;
      *) echo; echo "Invalid choice."; echo
 esac
