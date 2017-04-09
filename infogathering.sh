@@ -35,9 +35,10 @@ echo $choice
 case $choice in
      1) dmitry -winsepo $ip ;;
      2) firefox http://www.bing.com/search?q=ip%3A$ip&go=Submit+Query&qs=ds&form=QBLH & ;;
-     3) theharvester -d $ip -b all -f report/$ip.$(date +%Y-%m-%d_%H:%M)  ;;
-     4) ./subdomain.sh ;;
-     5) ./pings.sh ;;
-     6) ./main.sh ;;
+     3) theharvester -d $ip -b all -f /usr/share/wasp/report/$ip.$(date +%Y-%m-%d_%H:%M)  ;;
+     4) /usr/share/wasp/subdomain.sh ;;
+     5) /usr/share/wasp/pings.sh ;;
+     6) wasp ;;
      *) echo; echo "Invalid choice."; echo
 esac
+
