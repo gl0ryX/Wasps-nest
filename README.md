@@ -8,6 +8,6 @@ cd /opt/wasp
 
 bash install.sh
 
-./main.sh
+wasp
 
 this tool work on kali linux 
