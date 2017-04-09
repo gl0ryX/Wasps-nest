@@ -14,9 +14,9 @@ read choice
 echo $choice
 
 case $choice in
-     1) ./pings.sh ;;
-     2) ./infogathering.sh ;;
-     3) ./main.sh ;;
+     1) /usr/share/wasp/pings.sh ;;
+     2) /usr/share/wasp/infogathering.sh ;;
+     3) wasp ;;
      4) exit ;;
      *) echo; echo "Invalid choice."; echo
 esac
