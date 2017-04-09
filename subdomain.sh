@@ -44,11 +44,11 @@ done
 
 if [ -e tmp2 ]; then
      cat tmp2 | grep $ip | column -t | sort -u 
-     cat tmp2 | grep $ip | column -t | sort -u > report/$ip.$(date +%Y-%m-%d_%H:%M)
+     cat tmp2 | grep $ip | column -t | sort -u > /usr/share/wasp/report/$ip.$(date +%Y-%m-%d_%H:%M)
 fi
 
 rm index.html tmp*
 
 echo -e "\e[1;32mSaved in :.\e[0m" report/$ip.$(date +%Y-%m-%d_%H:%M) 
 echo
-./header.sh 
+/usr/share/wasp/header.sh 
