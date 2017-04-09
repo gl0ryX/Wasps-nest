@@ -1,7 +1,7 @@
 # Wasps-nest
 this is a reposltory for a Bash script .
 
-git clone https://github.com/gl0ryX/Wasps-nest.git /opt/wasp
+git clone https://github.com/gl0ryX/Wasps-nest.git /usr/share/wasp
 
 
 cd /opt/wasp
