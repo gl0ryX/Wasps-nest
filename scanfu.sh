@@ -1,6 +1,6 @@
 #!/bin/bash
-# Wasps Nest Tool v1 beta
-# this tool work on kali linux .  
+# Wasp 
+# 
 # 
 #
 #
@@ -22,12 +22,12 @@ read ip
 
 echo
 echo -e "\e[1;32m[1]. nikto.\e[0m"
-echo -e "\e[1;32m[2]. Database Assessment .\e[0m"
-echo -e "\e[1;32m[3]. Wordpress Scan.\e[0m"
-echo -e "\e[1;32m[4]. Joomla Scan.\e[0m"
+echo -e "\e[1;32m[2]. Wordpress Scan.\e[0m"
+echo -e "\e[1;32m[3]. Joomla Scan.\e[0m"
+echo -e "\e[1;32m[4]. Fuzzing Files[wfuzz].\e[0m"
 echo -e "\e[1;32m[5]. Back.\e[0m"
 echo
-echo " - - - - "$ip" - - - -"
+echo " - - - - "$ip" - - - -"s
 echo -e "\e[1;36m1. Choice.\e[0m"
 read choice
 
@@ -35,9 +35,9 @@ echo $choice
 
 case $choice in
      1) nikto -h $ip  ;;
-     2) ./dbassessmnt.sh ;;
-     3) wpscan --url $ip  ;;
-     4) joomscan -u $ip  ;;
-     5) ./main.sh ;;
+     2) wpscan --url $ip  ;;
+     3) joomscan -u $ip  ;;
+     4) wfuzz --hc 404 -w /usr/share/seclists/Discovery/Web_Content/big.txt $ip/FUZZ ;;
+     5) wasp ;;
      *) echo; echo "Invalid choice."; echo
 esac
