@@ -20,7 +20,7 @@ this tool work on kali linux
 6. Metasploit Payloads.
 7. Exit.
 
-1. Choice.
+ Choice.
 
 ===============================
-thanx 
+
