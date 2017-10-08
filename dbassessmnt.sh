@@ -38,7 +38,7 @@ echo -e "\e[1;36m[3]. risk3 random.\e[0m"
 echo -e "\e[1;36m[4]. tamper space2mysqlblank.py.\e[0m"
 echo -e "\e[1;36m[5]. identify Waf.\e[0m"
 echo -e "\e[1;36m[6]. tamper space comment.\e[0m"
-echo -e "\e[1;36m[7]. bypass2.\e[0m"
+echo -e "\e[1;36m[7]. soon.\e[0m"
 echo -e "\e[1;32m[8]. back.\e[0m"
 echo -e "\e[1;32m[9]. main.\e[0m"
 echo
