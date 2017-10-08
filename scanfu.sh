@@ -1,6 +1,6 @@
 #!/bin/bash
-# Wasp 
-# 
+# Wasps Nest Tool v1 beta
+# this tool work on kali linux .  
 # 
 #
 #
