@@ -23,7 +23,7 @@ __      ____ _ ___ _ __
 EOF
 echo
 echo -e "\e[1;31m:::::::Wasps Nest Tool v.0 2017:::::::.\e[0m"
-echo "                                              c0ded by sup3r."
+echo "                                              c0ded by 0xline."
 echo -e "\e[1;31mPlease enter Your Ip:\e[0m"
 read lip
 echo -e "\e[1;31mPlease enter reverse Port:\e[0m"
@@ -61,4 +61,3 @@ case $choice in
      10) exit ;;
      *) echo; echo "Invalid choice."; echo
 esac
-
