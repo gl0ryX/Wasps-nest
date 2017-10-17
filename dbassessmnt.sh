@@ -22,6 +22,9 @@ cat << "EOF"
 i will nest in database 
 EOF
 echo
+while :
+do
+echo -e "\e[1;31m:::::::Wasp Tool v.1 2017:::::::.\e[0m"
 echo -e "\e[1;92m:::::::Database Assessment :::::::.\e[0m"
 echo -e "\e[1;32mPlease enter Target IP:\e[0m"
 read ip
@@ -38,16 +41,15 @@ echo -e "\e[1;36m[3]. risk3 random.\e[0m"
 echo -e "\e[1;36m[4]. tamper space2mysqlblank.py.\e[0m"
 echo -e "\e[1;36m[5]. identify Waf.\e[0m"
 echo -e "\e[1;36m[6]. tamper space comment.\e[0m"
-echo -e "\e[1;36m[7]. soon.\e[0m"
-echo -e "\e[1;32m[8]. back.\e[0m"
-echo -e "\e[1;32m[9]. main.\e[0m"
+echo -e "\e[1;32m[7]. main.\e[0m"
+echo -e "\e[1;32m[8]. exit.\e[0m"
 echo
 echo
 echo -e "\e[1;32m1. Choice.\e[0m"
-read choice
+read -n1 -s
 
 echo $choice
-case $choice in
+case "$REPLY" in
      1) sqlmap -u "$ip/$page" --dbs   ;;
      2) sqlmap -u "$ip/$page" --dump ;;
      3) sqlmap -u "$ip/$page" --level=5 --risk=3 --random-agent --user-agent -v3 --batch --threads=10 --dbs  ;;
@@ -55,7 +57,10 @@ case $choice in
      5) sqlmap -u "$ip/$page" --identify-waf --random-agent -v 3 --tamper="between,randomcase,space2comment" --dbs ;;
      6) sqlmap -u "$ip/$page" --dbms="MySQL" -v3 --technique U --tamper="space2comment" --dbs ;;
      7) wasp ;;
-     8) /usr/share/wasp/dmassessmnt.sh ;;
-     9) wasp ;;
+     8) exit ;;
      *) echo; echo "Invalid choice."; echo
 esac
+
+sleep 1
+
+done
