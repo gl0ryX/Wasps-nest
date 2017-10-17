@@ -22,10 +22,12 @@ __      ____ _ ___ _ __
                   |_|    
 EOF
 echo
-echo -e "\e[1;31m:::::::Wasps Nest Tool v.0 2017:::::::.\e[0m"
+echo -e "\e[1;31m:::::::Wasp Tool v.1 2017:::::::.\e[0m"
 echo "                               c0ded by twitter/0xline."
 mkdir -p /usr/share/wasp/report
 echo
+while :
+do
 echo -e "\e[1;32m1. Information Gathering.\e[0m"
 echo -e "\e[1;32m2. Nmap ninja c0mmands.\e[0m"
 echo -e "\e[1;32m3. ScanFu.\e[0m"
@@ -35,11 +37,11 @@ echo -e "\e[1;32m6. Metasploit Payloads.\e[0m"
 echo -e "\e[1;32m7. Exit.\e[0m"
 echo
 echo -e "\e[1;36m1. Choice.\e[0m"
-read choice
+read -n1 -s
 
 echo $choice
 
-case $choice in
+case "$REPLY" in
      1) /usr/share/wasp/infogathering.sh ;;
      2) /usr/share/wasp/nmapninja.sh ;;
      3) /usr/share/wasp/scanfu.sh ;;
@@ -49,3 +51,6 @@ case $choice in
      7) exit ;;
      *) echo; echo "Invalid choice."; echo
 esac
+sleep 1
+
+done
