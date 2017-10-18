@@ -23,7 +23,7 @@ __      ____ _ ___ _ __
 EOF
 echo
 echo -e "\e[1;31m:::::::Wasp Tool v.1 2017:::::::.\e[0m"
-echo "                               c0ded by twitter/0xline."
+echo "                               0xline.com/wasp"
 mkdir -p /usr/share/wasp/report
 echo
 while :
