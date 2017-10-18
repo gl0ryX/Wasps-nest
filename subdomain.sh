@@ -15,7 +15,7 @@ __      ____ _ ___ _ __
                   |_|    
 EOF
 echo
-
+cd /usr/share/wasp/
 echo -e "\e[1;32m:::::::Find Subdomains:::::::.\e[0m"
 #echo -e "\e[1;32mPlease enter Target Ip:\e[0m"
 
