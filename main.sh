@@ -22,8 +22,7 @@ __      ____ _ ___ _ __
                   |_|    
 EOF
 echo
-echo -e "\e[1;31m:::::::Wasp Tool v.1 2017:::::::.\e[0m"
-echo "                               www.0xline.com/wasp"
+echo -e "\e[1;31m:::::::Wasp Tool v.2 2019:::::::.\e[0m"
 mkdir -p /usr/share/wasp/report
 echo
 while :
@@ -34,7 +33,8 @@ echo -e "\e[1;32m3. ScanFu.\e[0m"
 echo -e "\e[1;32m4. Database Assessment .\e[0m"
 echo -e "\e[1;32m5. LFI Attack.\e[0m"
 echo -e "\e[1;32m6. Metasploit Payloads.\e[0m"
-echo -e "\e[1;32m7. Exit.\e[0m"
+echo -e "\e[1;32m7. BOF tools.\e[0m"
+echo -e "\e[1;32m8. Exit.\e[0m"
 echo
 echo -e "\e[1;36m1. Choice.\e[0m"
 read -n1 -s
@@ -48,7 +48,8 @@ case "$REPLY" in
      4) /usr/share/wasp/dbassessmnt.sh ;;
      5) /usr/share/wasp/curlwsp.sh ;;
      6) /usr/share/wasp/payloads.sh ;;
-     7) exit ;;
+     7) /usr/share/wasp/buff.sh ;;
+     8) exit ;;
      *) echo; echo "Invalid choice."; echo
 esac
 sleep 1
