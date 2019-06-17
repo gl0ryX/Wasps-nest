@@ -19,13 +19,10 @@ cat << "EOF"
               `: :  :  : :  :_.-'
                 `:_ :  :__:-'
                    '"''' 
-i will nest in database 
 EOF
 echo
 while :
 do
-echo -e "\e[1;31m:::::::Wasp Tool v.1 2017:::::::.\e[0m"
-echo -e "\e[1;92m:::::::Database Assessment :::::::.\e[0m"
 echo -e "\e[1;32mPlease enter Target IP:\e[0m"
 read ip
 echo
