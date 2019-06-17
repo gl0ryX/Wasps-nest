@@ -19,8 +19,8 @@ read -n1 -s
 echo $choice
 
 case "$REPLY" in
-     1) /usr/share/wasp/x86/x86reverse.sh ;;
-     2) /usr/share/wasp/x64/x64reverse.sh ;;
+     1) /usr/share/wasp/x86reverse.sh ;;
+     2) /usr/share/wasp/x64reverse.sh ;;
      3) /usr/share/wasp/payloads.sh ;;
      4) exit ;;
      *) echo; echo "Invalid choice."; echo
