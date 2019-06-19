@@ -30,7 +30,7 @@ echo
 echo -e "\e[1;32m1. Create Pattren  .\e[0m"
 echo -e "\e[1;32m2. Offset .\e[0m"
 echo -e "\e[1;32m3. Bad characters .\e[0m"
-echo -e "\e[1;32m4. Windows Messagebox .\e[0m"
+echo -e "\e[1;32m4. Windows Payloads .\e[0m"
 echo -e "\e[1;32m5. main.\e[0m"
 echo -e "\e[1;32m6. Exit.\e[0m"
 echo
@@ -42,7 +42,7 @@ case "$REPLY" in
      1) /usr/share/wasp/pattrn.sh ;;
      2) /usr/share/wasp/offset.sh ;;
      3) python /usr/share/wasp/bad.py ;;
-     4) msfvenom x86 --platform windows -p windows/messagebox TEXT="Pwned!!" -f python ;;
+     4) /usr/share/wasp/messagebox.sh ;;
      5) wasp ;;
      6) exit ;;
      *) echo; echo "Invalid choice."; echo
